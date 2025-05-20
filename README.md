@@ -1,14 +1,14 @@
-🧬 Lymph Node Tumor Classification using Deep Learning
+# 🧬 Lymph Node Tumor Classification using Deep Learning
 This project presents a deep learning solution for classifying histopathological images of lymph nodes as benign or malignant. By leveraging transfer learning on a pre-trained convolutional neural network, this work aims to support early detection and diagnosis of cancer, particularly metastatic breast cancer, in lymph node tissue.
 
-🚀 Project Overview
+##🚀 Project Overview
 ⏱️ Objective: Predict cancer presence in lymph node histopathology slides using image classification.
 
 🧠 Approach: Fine-tune EfficientNetB0 using transfer learning and apply augmentation to improve model robustness.
 
 📈 Outcome: Achieved high training and validation accuracy with a focus on generalization through regularization techniques.
 
-📂 Dataset Details
+## 📂 Dataset Details
 📚 Source: TensorFlow Datasets — PatchCamelyon (PCam)
 
 🔍 Description: The dataset is derived from the Camelyon16 challenge and consists of small (96×96) patches extracted from histopathology scans.
@@ -21,7 +21,7 @@ This project presents a deep learning solution for classifying histopathological
 
 🔢 Size: Over 300,000 labeled image patches (we selected a manageable subset for training/validation/testing)
 
-🧠 Model Architecture
+## 🧠 Model Architecture
 🔧 Base Model: EfficientNetB0 (with pre-trained ImageNet weights)
 
 🔀 Layers Added:
@@ -36,7 +36,7 @@ Final Dense Layer with Sigmoid Activation for Binary Classification
 
 ❄️ Freezing: The base model was frozen initially and later unfrozen (fine-tuned) for further improvement.
 
-🛠️ Key Techniques Used
+## 🛠️ Key Techniques Used
 Data Augmentation (horizontal/vertical flip, rotation, zoom)
 
 EarlyStopping and ReduceLROnPlateau callbacks
@@ -45,7 +45,7 @@ Adam optimizer with binary cross-entropy loss
 
 Accuracy as the evaluation metric
 
-📊 Model Performance
+## 📊 Model Performance
 ✅ Training Accuracy: ~99%
 
 ✅ Validation Accuracy: ~97%
@@ -54,10 +54,10 @@ Accuracy as the evaluation metric
 
 🧪 Tested on unseen test samples with accurate predictions
 
-🖼️ Sample Predictions
+## 🖼️ Sample Predictions
 Predictions are visualized with the image patch and its predicted label (tumor / no tumor), allowing manual verification.
 
-📁 Project Structure
+## 📁 Project Structure
 ├── lymph.ipynb
 ├── README.md
 ├── dataset/
@@ -66,7 +66,7 @@ Predictions are visualized with the image patch and its predicted label (tumor /
 │ └── val/
 └── models/ (optional: saved models/checkpoints)
 
-📌 Requirements
+## 📌 Requirements
 Python 3.8+
 
 TensorFlow 2.x
@@ -83,17 +83,15 @@ You can install the required packages using:
 
 pip install -r requirements.txt
 
-🚧 Future Work
+## 🚧 Future Work
 Deploy model via Flask web app for real-time classification
 
 Integrate Grad-CAM for visual explanations
 
 Expand to multi-class tumor subtype classification
 
-👨‍💻 Author
+## 👨‍💻 Author
 Tarun Sai Nyalakanti
 B.Tech in Computer Science, VIT-AP University
 AWS Cloud Certified | MERN Stack Developer | AI/ML Enthusiast
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
